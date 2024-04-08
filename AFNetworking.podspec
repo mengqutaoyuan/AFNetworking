@@ -20,16 +20,13 @@ Pod::Spec.new do |s|
   s.tvos.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking' }
 
   s.source_files = 'AFNetworking/AFNetworking.h'
-  s.resource_bundles = {'AFNetworking' => ['AFNetworking/PrivacyInfo.xcprivacy']}
 
   s.subspec 'Serialization' do |ss|
     ss.source_files = 'AFNetworking/AFURL{Request,Response}Serialization.{h,m}'
-    ss.resource_bundles = {'AFNetworking' => ['AFNetworking/PrivacyInfo.xcprivacy']}
   end
 
   s.subspec 'Security' do |ss|
     ss.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'
-    ss.resource_bundles = {'AFNetworking' => ['AFNetworking/PrivacyInfo.xcprivacy']}
   end
 
   s.subspec 'Reachability' do |ss|
@@ -38,7 +35,6 @@ Pod::Spec.new do |s|
     ss.tvos.deployment_target = '9.0'
 
     ss.source_files = 'AFNetworking/AFNetworkReachabilityManager.{h,m}'
-    ss.resource_bundles = {'AFNetworking' => ['AFNetworking/PrivacyInfo.xcprivacy']}
   end
 
   s.subspec 'NSURLSession' do |ss|
@@ -58,6 +54,5 @@ Pod::Spec.new do |s|
     ss.dependency 'AFNetworking/NSURLSession'
 
     ss.source_files = 'UIKit+AFNetworking'
-    ss.resource_bundles = {'AFNetworking' => ['AFNetworking/PrivacyInfo.xcprivacy']}
   end
 end
