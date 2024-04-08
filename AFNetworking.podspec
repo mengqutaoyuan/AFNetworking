@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/AFNetworking'
   s.authors  = { 'Mattt Thompson' => 'm@mattt.me' }
   s.source   = { :git => 'https://github.com/AFNetworking/AFNetworking.git', :tag => s.version }
-  s.resource_bundles = {"AFNetworking_Privacy" => ["AFNetworking/PrivacyInfo.xcprivacy"]}
+  
 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.tvos.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking' }
 
   s.source_files = 'AFNetworking/AFNetworking.h'
+  s.resource_bundles = {"AFNetworking" => ["AFNetworking/PrivacyInfo.xcprivacy"]}
 
   s.subspec 'Serialization' do |ss|
     ss.source_files = 'AFNetworking/AFURL{Request,Response}Serialization.{h,m}'
